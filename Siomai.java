@@ -5,6 +5,27 @@ public class Siomai {
 		int porkNum, beefNum, shrimpNum, cokeNum, royalNum, spriteNum;
 		welcomeMessage();
 		
+		
+		String[] foods = {"PORK SIOMAI (20.00)", "BEEF SIOMAI (25.00)", "SHRIMP SIOMAI (30.00)", "COKE", "ROYAL", "SPRITE"};
+		
+		for(int i = 0; i < foods.length; i++){
+			if (i == 0) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + porkNum);
+			} else if (i == 1) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + beefNum);
+			}  else if (i == 2) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + shrimpNum);
+			} else if (i == 3) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + cokeNum);
+			} else if (i == 4) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + royalNum);
+			} else if (i == 5) {
+				System.out.println("ENTER THE NUMBER OF " + foods[i] + " ORDERED: " + spriteNum);
+			} else {
+				return;
+			}
+		}
+		
 		Scanner scan = new Scanner(System.in);
 		porkNum = scan.nextInt();
 		beefNum = scan.nextInt();
@@ -13,7 +34,15 @@ public class Siomai {
 		royalNum = scan.nextInt();
 		spriteNum = scan.nextInt();
 		
-		//userInput(porkNum, beefNum, shrimpNum, cokeNum, royalNum, spriteNum);
+		
+		
+
+
+		
+		//do {
+			
+		//} while ()
+		
 	}
 	
 	// welcome msg
@@ -21,29 +50,7 @@ public class Siomai {
 		System.out.println("HIJK SIOMAI FOR YOU CART");
 		System.out.println("WHAT'S YOUR ORDER MA'AM/SIR....");
 	}
-	// arr of food choices
-	public static int foodChoices(int quantity){
-		String[] siomai = {"PORK SIOMAI (20.00)", "BEEF SIOMAI (25.00)", "SHRIMP SIOMAI (30.00)"};
-		String[] drinks = {"COKE", "ROYAL", "SPRITE"};
-		
-		for(int i = 0; i < siomai.length; i++){
-			System.out.println("ENTER THE NUMBER OF " + siomai[i] + " ORDERED: " + quantity);
-		}
-		
-		return 0;	
-	}
-	
-	// user inputs
-	public static int[] userInput(int porkQty, int beefQty, int shrimpQty, int cokeQty, int royalQty, int spriteQty){
-		int pork = foodChoices(porkQty);
-		int beef = foodChoices(beefQty);
-		int shrimp = foodChoices(shrimpQty);
-		int coke = foodChoices(cokeQty);
-		int royal = foodChoices(cokeQty);
-		int sprite = foodChoices(spriteQty);
-		
-		return new int[] {pork, beef, shrimp, coke, royal, sprite};
-	}
+
 	
 	// calculation of prices
 	public static void calculatePrice() {
